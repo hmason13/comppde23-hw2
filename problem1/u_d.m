@@ -13,5 +13,13 @@ function DirichletBoundaryValue = u_d(x)
 %    This Dirichlet boundary data is used to compute Fig. 3 in 
 %    "Remarks around 50 lines of Matlab: Short finite element 
 %    implementation"
+X = x(:,1);
+Y = x(:,2);
 
-DirichletBoundaryValue =  zeros(size(x,1),1);
+holder = zeros(size(x,1),1);
+for index = 1:size(X,1)
+    if X(index)==1
+        holder(index) = 500;
+    end
+end
+DirichletBoundaryValue =  holder;

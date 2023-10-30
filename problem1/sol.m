@@ -15,4 +15,4 @@ function VolumeForce = sol(x);
 
 X = x(:,1);
 Y = x(:,2);
-VolumeForce = sin(2*pi*X).*sin(pi*Y);
+VolumeForce = sin(4*pi*X).*sin(2*pi*Y);

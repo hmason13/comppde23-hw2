@@ -15,4 +15,7 @@ function VolumeForce = f(x);
 
 X = x(:,1); % point x-coordinate
 Y = x(:,2); % point y-coorindate
-VolumeForce = 3*X.*Y;        % needs to be updated
+% VolumeForce = 3*X.*Y;
+% VolumeForce = 20*(pi^2).*sin(4*pi.*X).*sin(2*pi.*Y);
+VolumeForce = 0*X.*Y;
+% needs to be updated

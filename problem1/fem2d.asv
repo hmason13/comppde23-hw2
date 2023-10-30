@@ -49,6 +49,33 @@
 %    "Remarks around 50 lines of Matlab: Short finite element 
 %    implementation"
 
+% Initialisation
+load coordinates.dat; coordinates(:,1)=[];
+load elements3.dat; elements3(:,1)=[];
+load elements4.dat; elements4(:,1)=[];
+load neumann.dat; neumann(:,1) = [];
+load dirichlet.dat; dirichlet(:,1) = [];
+
+try
+    load elements3.dat;
+    elements3(:,1)=[];
+catch anException
+    elements3=[];
+end
+
+try
+    load elements4.dat;
+    elements4(:,1)=[];
+catch anException
+    elements4=[];
+end
+
+try
+    load neumann.dat;
+    neumann(:,1)=[];
+catch anException
+    elements3=[];
+end
 
 %% refines the mesh several times, according to p3 instructions
 % idxToRefine is calculated in p3Loop.m
